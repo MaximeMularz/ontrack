@@ -9311,6 +9311,7 @@
 			<!--- ontrack -->
 			<BlockDrawer button-color="255 104 2" name="bd.ontrack" type="factory">
 			    <BlockGenusMember>traffic_light</BlockGenusMember>
+			    <BlockGenusMember>ontrack_LCD_Backlight</BlockGenusMember>
 			</BlockDrawer>
 
 			<BlockGenus name="traffic_light" kind="command" color="255 102 0" initlabel="bg.df_traffic_light">
@@ -9331,6 +9332,33 @@
 				</Image>
 			</Images>
 		</BlockGenus>
+		
+		<BlockGenus name="ontrack_LCD_Backlight" kind="command" color="0 255 0" initlabel="bg.ontrack_LCD_Backlight">
+			<description>
+				<text>LCD_Backlight</text>
+			</description>			
+			<BlockConnectors>
+				<BlockConnector connector-type="string" connector-kind="socket" label="bc.print">
+					<DefaultArg genus-name="message" label="LCD I2C RGB"/>
+				</BlockConnector>
+				<BlockConnector connector-type="number" connector-kind="socket" label="bc.line_number">
+					<DefaultArg genus-name="number" label="0" />
+				</BlockConnector>
+				<BlockConnector connector-type="boolean" connector-kind="socket" label="bc.status">
+					<DefaultArg genus-name="digital-on" label="ON" />
+				</BlockConnector>
+				
+			</BlockConnectors>
+			<Images>
+				<Image>
+					<FileLocation>com/ardublock/block/seeedstudio/LCD_Serial_RGB_Backlight.png</FileLocation>
+				</Image>
+			</Images>
+		</BlockGenus>
+		
+		
+		
+		
 
 
 			<BlockDrawer button-color="255 102 0" name="bd.dfrobot" type="factory">

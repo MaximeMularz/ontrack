@@ -18,8 +18,8 @@ Development
 ----
 Change the /src/main/resources/com/ardublock/block/ardublock_def.xml to add new blocks to ArduBlock
 
-	$ mvn clean package
-
+	$ mvn -DskipTests=true clean package
+	$ mvn -DskipTests=true clean package
 	$ mvn compile exec:java -Dexec.mainClass="com.ardublock.Main"
 
 The Visual Block environment should show up. Happy Hacking! ;) 
